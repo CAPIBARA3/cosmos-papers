@@ -1,1 +1,38 @@
 .DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.bcf
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.lol
+*.lot
+*.synctex.gz
+*.nav
+*.snm
+*.run.xml
+*.xdv
+
+# Backup files
+*~
+*.bak
+*.orig
+
+# macOS files
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+
+# Ignore compiled class/style files if you keep them built locally
+*.cls
+*.bst
