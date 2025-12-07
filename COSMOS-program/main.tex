@@ -1,0 +1,210 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{geometry}
+
+\geometry{a4paper, margin=1in}
+
+\title{CAPIBARA-COSMOS \\
+\large A Pragmatic Student-Led Path to Multi-Satellite High-Energy Astrophysics}
+
+\author{Joan Alcaide-Núñez\thanks{Fakultät für Physik, Ludwig-Maximilians-Universität München (LMU Munich), Geschwister-Scholl-Platz 1, 80539 Munich, Germany; \texttt{capigx.capibara@outlook.com}} \\
+\author{Martina Solano} \\
+\author{Adel Alba El Farhi} \\
+\author{Rosa Berbejo\thanks{Facultad de Ciencias, Universidad de Salamanca (USAL), Plaza de los Caídos s/n. 37008 Salamanca, Spain}} \\
+for the \textbf{CAPIBARA Collaboration}\footnote{Collaboration for the Analysis of Photonic and Ionic Bursts and RAdiation}}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The era of multi-messenger astronomy demands agile, all-sky monitors for high-energy transients to maximize the science return from next-generation gravitational wave and electromagnetic observatories. CAPIBARA-COSMOS is a student-led initiative proposing a pragmatic, phased development path to field a collaborative constellation of compact X-ray/$\gamma$-ray satellites by the mid-2030s. Unlike traditional student projects focused on single CubeSats, our core innovation is a distributed development framework enabling multiple universities to jointly develop coordinated satellites. We present a three-phase roadmap: (1) \textbf{Phase 0: Foundation (2024-2026)} to establish collaboration infrastructure and secure mentorship; (2) \textbf{Phase 1: COSMOS-Duo (2026-2032)}, two identical 6U-12U satellites built by different university teams to demonstrate in-orbit triangulation and validate our distributed model; (3) \textbf{Phase 2: COSMOS-NET (2032-2038)}, expanding to a 6-7 satellite operational constellation. This document outlines the scientific motivation, the novel distributed collaboration model, the detailed Phase 1 COSMOS-Duo concept, and the strategic path to achieving transformative, student-built constellation science.
+
+\end{abstract}
+
+\textbf{Keywords:} High-energy astrophysics, CubeSat constellations, multi-messenger astronomy, student-led research
+
+\section{Introduction and Motivation}
+
+We are entering an era defined by multi-messenger astronomy, where coordinated observations across gravitational wave (GW), neutrino, and electromagnetic (EM) channels will unveil the physics of the most violent cosmic events. High-energy ($\sim$1 keV to few MeV) transients phenomena, for instance gamma-ray bursts (GRBs), magnetar flares, and jet-driven events, are expected electromagnetic counterparts to many GW sources. The scientific yield of next-generation facilities like the Einstein Telescope (ET), Laser Interferometer Space Antenna (LISA), and Cosmic Explorer hinges on rapid, precise localization of these counterparts.
+
+While flagship EM missions like NewAthena (X-ray) and THESEUS ($\gamma$-ray) are planned for the 2030s, their observing schedules will be shared among many priorities. Simulations predict $10^4$ detections per year with ET alone from binary neutron star (BNS) mergers \citep{colombo}. This anticipated high rate of GW detections creates a pressing need for a dedicated, responsive, all-sky monitor capable of prompt localization and fast alert dissemination.
+
+The CAPIBARA Collaboration, a student-led research group, aims to address this need through the CAPIBARA-COSMOS program. We propose a gradual mission where the ultimate goal is the COSMOS-NET constellation. Our immediate strategy is to build the necessary flight heritage and student expertise starting with a pathfinder mission \textbf{COSMOS-Duo}: a pair of satellites to demonstrate time-delay localisation of high-energy transients. This document details the strategic path of the CAPIBAR-COSMOS program towards realizing this visions, emphasizing credible and feasible objectives as well as student training.
+
+\section{State of the Field and Strategic Gap}
+
+Current high-energy monitoring relies on aging assets like \textit{Fermi} and \textit{Swift}, supplemented by newer missions such as Einstein Probe (EP) in the X-rays, SVOM, and the CubeSat-based HERMES in the $\gamma$-rays. A coverage gap emerges towards the beginning of the next decade, between the end of current missions and the full operation of next-generation flagships. Furthermore, no existing or firmly planned mission combines the following attributes critical for the 2030s multi-messenger landscape:
+
+\begin{itemize}
+    \item \textbf{All-sky, continuous transient monitoring} in the X-ray/soft $\gamma$-ray band
+    \item \textbf{Rapid, arcminute-level autonomous localization}
+    \item \textbf{A scalable, distributed architecture} that is cost-effective to develop and launch
+\end{itemize}
+
+CubeSat constellations have emerged as a viable platform for distributed science. The success of pathfinders like GRBAlpha, EIRSAT, BurstCube and HERMES demonstrates the feasibility of student-developed hardware detecting high-energy transients. However, this projects focused on demonstrating the detector technology and basic sience return from a single satellite. CAPIBARA-COSMOS builds upon this precedent and ... hertiage by proposing a hased program that evolves from a foundatational phase to a demonstrator mission (\textbf{COSMOS-Duo})and finally to a full constellation (\textbf{COSMOS-Net}) within an international collaboration of students teams.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{observatory_timeline.png}
+    \caption{Timeline of high-energy and GW observatories from 2010 to 2040, with the revised CAPIBARA-COSMOS roadmap. The program begins with a Foundation phase (Phase 0), progresses to the COSMOS-Duo demonstrator (Phase 1, launch \textasciitilde2030), and scales to the operational COSMOS-NET constellation (Phase 2, deployment mid-2030s). This aligns with the maturation of next-generation GW observatories.}
+    \label{fig:state}
+\end{figure}
+
+\section{The CAPIBARA-COSMOS Development Strategy: A Distributed Model}
+
+CAPIBARA-COSMOS is a program by the CAPIBARA Collaboration, a student-led international research group focused on exploring the high energy Universe. Our core development strategy is a phased program thought to make constellation development feasible and gradually build experience. The strategy follows a three-phase roadmap:
+
+\begin{enumerate}
+    \item \textbf{Phase 0 - Foundation (2025-2026):} Establish the collaboration infrastructure: formalize an Advisory Board with experts from heritage missions (GRBAlpha, HERMES, EIRSAT-1), complete technical gap analyses, secure initial lab access, and prepare proposals (e.g., ESA's Fly Your Satellite! program) for Duo.
+    \item \textbf{Phase 1 - COSMOS-Duo (2026-2032):} Build and launch two identical 6U-12U satellites (\textit{Duo-1} and \textit{Duo-2}). Each satellite is primarily developed by a different university consortium, proving the distributed model. The primary goal is to demonstrate in-orbit triangulation (localization $<1^\prime$) and validate the collaboration framework. Launch would optimally be via an educational program (e.g., FYS! 2030) or alternatively via commercial rideshare.
+    \item \textbf{Phase 2 - COSMOS-NET (2032-2038):} Scale the proven framework to an operational constellation of 4-5 additional satellites, involving 5-8 universities worldwide. Secure flagship funding and launch in the 2035-2038 timeframe to align with LISA and ET. Provide arcminute-scale localization via intensity interferometry across the network.
+\end{enumerate}
+
+This model acknowledges the student learning curve, leverages existing expertise through structured mentorship, and starts with a achievable yet innovative step (time-delay locasation) rather than a leap to a full constellation.
+
+\textcolor{red}{revised until here}
+
+\subsection{Phase 0: The Foundation}
+
+\textbf{Goal:} Build the collaboration machine and secure the mentorship necessary for success.
+
+\textbf{Key Activities:}
+\begin{itemize}
+    \item Formalize an Advisory Board of 3-5 senior scientists from heritage CubeSat missions.
+    \item Complete comprehensive literature review and technical gap analysis (publish as a white paper).
+    \item Develop a robust, open-source simulation framework for constellation performance.
+    \item Secure dedicated lab space at 2-3 partner universities.
+    \item Submit a proposal to ESA's Fly Your Satellite! program for the development and launch of \textit{Duo-1}.
+\end{itemize}
+
+\textbf{Success Criteria:} FYS! proposal submitted; Advisory Board active; simulation framework publicly released; collaboration agreements between 3+ universities signed.
+
+\subsection{Phase 1: COSMOS-Duo}
+
+\textbf{Concept:} Two identical 6U-12U satellites built by distributed university teams. Identity simplifies design while distributed construction proves the collaboration model.
+
+\textbf{Distributed Development Model:}
+\begin{verbatim}
+Year 1-2:   University Consortium A → Leads payload/detector development
+            University Consortium B → Leads bus/platform development
+            All teams collaborate on system engineering
+
+Year 3-4:   Consortium A integrates and tests Duo-1
+            Consortium B integrates and tests Duo-2
+            Cross-team review and support
+
+Year 5-6:   Launch (2030/31), commissioning, and coordinated operations
+\end{verbatim}
+
+\textbf{Key Specifications:}
+\begin{itemize}
+    \item \textbf{Payload:} Enhanced detector (e.g., CsI/GAGG(Ce) scintillator + SiPM array or CZT) covering 10-2000 keV.
+    \item \textbf{Core Technology:} GPS-synchronized onboard oscillators for precise time-tagging ($\sim$100 ns accuracy) enabling triangulation.
+    \item \textbf{Platform:} 6U-12U form factor to accommodate larger detectors and robust comms.
+    \item \textbf{Success Criteria:} Successful launch and commissioning of both satellites; demonstration of triangulation on $>$10 bright GRBs with $<1^\circ$ localization accuracy; validation of the distributed development framework.
+\end{itemize}
+
+\subsection{Phase 2: COSMOS-NET}
+
+\textbf{Concept:} Scaling the Duo framework to a full constellation. Each new satellite might be led by a new university consortium, creating a pipeline of student involvement.
+
+\textbf{Advancement:} Implements intensity interferometry techniques across the network for $<1$ arcminute localization. Focus shifts to constellation-level systems engineering, autonomous operations, and integration with the broader multi-messenger alert network (e.g., GCN).
+
+\subsection{Technology Development and Heritage Buildup}
+
+\begin{table}[h!]
+\centering
+\caption{Heritage buildup across the revised CAPIBARA-COSMOS roadmap}
+\begin{tabular}{p{0.18\textwidth} p{0.25\textwidth} p{0.27\textwidth} p{0.25\textwidth}}
+\toprule
+\textbf{Key Technology} & \textbf{Phase 0: Foundation} & \textbf{Phase 1: COSMOS-Duo} & \textbf{Phase 2: COSMOS-NET} \\
+\midrule
+\textbf{Collaboration Model} & Advisory Board established; inter-university agreements. & \textbf{Proven} via building two satellites at different sites. & Scaled to 5-8 universities building a coordinated constellation. \\
+\textbf{Detector System} & Design review with heritage teams (GRBAlpha/HERMES). & Two identical flight units built. Heritage established. & Enhanced, possibly dual-band units built by new university teams. \\
+\textbf{Timing \& Triangulation} & Simulation and algorithm development. & \textbf{Demonstrated in orbit} with $<1^\circ$ accuracy. & Nanosecond-level sync; intensity interferometry for $<1'$ accuracy. \\
+\textbf{Spacecraft Systems} & Bus trade studies; vendor discussions. & Two 6U-12U buses flown and operated. & Customized platforms; constellation management software. \\
+\textbf{Student Training} & 10+ students in proposal writing, management, sims. & 30+ students through full satellite lifecycle (x2). & 100+ students in constellation engineering and science ops. \\
+\bottomrule
+\end{tabular}
+\label{tab:tech_heritage}
+\end{table}
+
+\section{Scientific Objectives}
+
+The phased approach enables progressive scientific returns aligned with growing technical capability:
+
+\begin{itemize}
+    \item \textbf{Phase 0/1 (COSMOS-Duo):} Primary: Demonstrate in-orbit triangulation capability. Secondary: Detect and localize ($<1^\circ$) bright GRBs and other transients, contributing to public alerts and providing valuable light curves. This alone represents a step beyond single-student-CubeSat science.
+    \item \textbf{Phase 2 (COSMOS-NET):} Provide arcminute-scale, rapid localization of high-energy transients. This will revolutionize host galaxy identification for GW events (crucial for redshift measurements and cosmology), probe GRB jet physics through precise localization, and generate a vast, uniform catalog for population studies.
+\end{itemize}
+
+The mission directly enables student-led research within the collaboration on topics like multi-messenger cosmology and high-energy transient phenomena. All curated data will be publicly released.
+
+\section{Technical Feasibility and Heritage}
+
+The Duo-first strategy is explicitly designed for student feasibility:
+
+\begin{itemize}
+    \item \textbf{Technical Heritage:} We directly leverage flight-proven detector designs (scintillator+SiPM, CZT) from GRBAlpha, HERMES, and BurstCube. Building identical satellites halves the unique design burden.
+    \item \textbf{Programmatic Heritage:} ESA's "Fly Your Satellite!" program provides a structured pathway for the first satellite. The distributed model mitigates risk—no single team bears the full burden.
+    \item \textbf{Mentorship Heritage:} Formal collaboration with the GRBAlpha/HERMES teams provides crucial guidance, moving beyond ad-hoc advice to structured mentorship (e.g., their PhD students acting as technical liaisons).
+\end{itemize}
+
+This incremental, mentorship-rich approach de-risks the ambitious final constellation.
+
+\section{Partnerships, Resources, and Funding Strategy}
+
+Our strategy requires tailored partnerships at each phase:
+
+\begin{itemize}
+    \item \textbf{Phase 0:} Seek small university grants, in-kind lab access, and crowdfunding. The primary goal is securing a spot in ESA's FYS! program for \textit{Duo-1}. Formalize collaboration agreements with heritage teams and partner universities.
+    \item \textbf{Phase 1:} FYS! funding covers a significant portion of \textit{Duo-1}. \textit{Duo-2} funding will come from national space agency educational grants, university partnerships, and commercial rideshare opportunities (lower cost due to proven design).
+    \item \textbf{Phase 2:} Pursue larger grants from national space agencies (e.g., DLR, UKSA, CNES) and European Union framework programs (e.g., Horizon Europe) dedicated to small missions and constellation science.
+\end{itemize}
+
+\section{Implementation Roadmap and Immediate Actions}
+
+\begin{itemize}
+    \item \textbf{2024-2025:} Finalize this MCD. Formalize Advisory Board. Initiate structured collaboration talks with GRBAlpha/HERMES teams. Begin development of public simulation framework.
+    \item \textbf{2025-2026:} Submit FYS! proposal for \textit{Duo-1}. Finalize inter-university collaboration agreements. Begin preliminary design review (PDR) for Duo spacecraft.
+    \item \textbf{2026-2028:} Detailed design and fabrication of Duo satellites at distributed sites.
+    \item \textbf{2029-2030:} Integration, testing, and launch of \textit{Duo-1} (via FYS!).
+    \item \textbf{2030-2031:} Launch of \textit{Duo-2}, commissioning, and start of coordinated Duo science operations.
+    \item \textbf{2031-2035:} Duo operations and Phase 2 (COSMOS-NET) design/funding.
+    \item \textbf{2035-2038:} Construction, launch, and deployment of COSMOS-NET constellation.
+\end{itemize}
+
+\section{Broader Impact and Legacy}
+
+CAPIBARA-COSMOS is designed to create a lasting legacy:
+\begin{itemize}
+    \item \textbf{Educational Pipeline:} Trains students in increasingly complex systems: Phase 0 (proposal/science), Phase 1 (satellite engineering), Phase 2 (constellation systems). This creates a leadership pipeline for the space sector.
+    \item \textbf{Model for Collaboration:} Demonstrates a sustainable model for distributed, multi-university student projects, potentially transforming how such initiatives are organized globally.
+    \item \textbf{Scientific Community Service:} COSMOS-NET will serve as a vital community alert service for the 2030s multi-messenger ecosystem.
+    \item \textbf{Open Science:} All data, software, and documentation will be public, democratizing access to space science and fostering international collaboration.
+\end{itemize}
+
+\section{Conclusion}
+
+The need for a dedicated all-sky high-energy monitor in the 2030s is clear. CAPIBARA-COSMOS proposes a pragmatic, student-led pathway to meet this need through a novel distributed development model. By starting with a foundational phase and then a focused two-satellite demonstrator (COSMOS-Duo), we prove our core collaboration framework and core technology (triangulation) before scaling. This approach transforms an ambitious vision into an executable plan that balances scientific ambition with student reality. Our mission is dual-purpose: to deploy a key scientific instrument and to train the next generation of space scientists and engineers through hands-on constellation development. We invite the community to join us in this journey as advisors, collaborators, and partners.
+
+\section*{Acknowledgments}
+
+We are grateful to the members of the CAPIBARA Collaboration for useful discussions and feedback. We thank the developers of the open-source tools used in this work. We specifically acknowledge the pioneering work of the GRBAlpha and HERMES teams, whose heritage and mentorship are central to our plan. We welcome feedback and collaboration at our website: \href{https://capibara3.github.io}{https://capibara3.github.io}.
+
+\section*{Author Contributions}
+
+J.A.N. conceived the initial mission concept, leds the CAPIBARA-COSMOS program, and wrote the first draft of this manuscript. M.S. contributed to the ... and ... sections. A.A.E.F. contributed to the ... and ... sections. R.B. contributed to the ... and ... sections. The CAPIBARA Collaboration is a joint, international, student-led effort that develops research underpining this concept. The authors declare no competing interests.
+
+\section*{Code and Data Availability}
+
+All data and code used in this work is publicly available at the \href{https://github.com/capibara3/cosmos-obs-stats}{cosmos-obs-stats} GitHub repository.
+
+\end{document}

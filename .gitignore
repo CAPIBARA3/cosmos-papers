@@ -36,3 +36,6 @@
 # Ignore compiled class/style files if you keep them built locally
 *.cls
 *.bst
+
+# old versions
+COSMOS-program/previous-drafts
