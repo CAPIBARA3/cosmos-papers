@@ -1,11 +1,20 @@
 \documentclass[11pt]{article}
-\usepackage{amsmath,amssymb}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{array}
-\usepackage{booktabs}
-\usepackage{geometry}
 
+% --- Packages ---
+\usepackage{amsmath,amssymb}   % math symbols
+\usepackage{graphicx}           % figures
+\usepackage{array}              % tables
+\usepackage{booktabs}           % better tables
+\usepackage{geometry}           % page layout
+\usepackage{hyperref}           % clickable links
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+}
 \geometry{a4paper, margin=1in}
 
 \title{The CAPIBARA-COSMOS Programme\\
@@ -34,7 +43,7 @@ The era of multi-messenger astronomy demands agile, all-sky monitors for high-en
 
 We are entering an era defined by multi-messenger astronomy, where coordinated observations across gravitational wave (GW), neutrino, and electromagnetic (EM) channels will unveil the physics of the most violent cosmic events. High-energy ($\sim$1 keV to few MeV) transients phenomena, for instance gamma-ray bursts (GRBs), magnetar flares, and jet-driven events, are expected electromagnetic counterparts to many GW sources. The scientific yield of next-generation facilities like the Einstein Telescope (ET), Laser Interferometer Space Antenna (LISA), and Cosmic Explorer hinges on rapid, precise localization of these counterparts.
 
-While flagship EM missions like NewAthena (X-ray) and THESEUS ($\gamma$-ray) are planned for the 2030s, their observing schedules will be shared among many priorities. Simulations predict $10^4$ detections per year with ET alone from binary neutron star (BNS) mergers \citep{colombo}. This anticipated high rate of GW detections creates a pressing need for a dedicated, responsive, all-sky monitor capable of prompt localization and fast alert dissemination.
+While flagship EM missions like NewAthena (X-ray) and THESEUS ($\gamma$-ray) are planned for the 2030s, their observing schedules will be shared among many priorities. Simulations predict $10^4$ detections per year with ET alone from binary neutron star (BNS) mergers \cite{colombo2025}. This anticipated high rate of GW detections creates a pressing need for a dedicated, responsive, all-sky monitor capable of prompt localization and fast alert dissemination.
 
 The CAPIBARA Collaboration, a student-led research group, aims to address this need through the CAPIBARA-COSMOS program. We propose a gradual mission where the ultimate goal is the COSMOS-NET constellation. Our immediate strategy is to build the necessary flight heritage and student expertise starting with a pathfinder mission \textbf{COSMOS-Duo}: a pair of satellites to demonstrate time-delay localisation of high-energy transients. This document details the strategic path of the CAPIBAR-COSMOS program towards realizing this visions, emphasizing credible and feasible objectives as well as student training.
 
@@ -199,12 +208,20 @@ The need for a dedicated all-sky high-energy monitor in the 2030s is clear. CAPI
 
 We are grateful to the members of the CAPIBARA Collaboration for useful discussions and feedback. We thank the developers of the open-source tools used in this work. We specifically acknowledge the pioneering work of the GRBAlpha and HERMES teams, whose heritage and mentorship are central to our plan. We welcome feedback and collaboration at our website: \href{https://capibara3.github.io}{https://capibara3.github.io}.
 
-\section*{Author Contributions}
+\subsection*{Author Contributions}
 
 J.A.N. conceived the initial mission concept, leds the CAPIBARA-COSMOS program, and wrote the first draft of this manuscript. M.S. contributed to the ... and ... sections. R.B. contributed to the ... and ... sections. The CAPIBARA Collaboration is a joint, international, student-led effort that develops research underpining this concept. The authors declare no competing interests.
 
-\section*{Code and Data Availability}
+\subsection*{Code and Data Availability}
 
 All data and code used in this work is publicly available at the \href{https://github.com/capibara3/cosmos-obs-stats}{cosmos-obs-stats} GitHub repository.
+
+\subsection*{Conflict of Interest}
+The authors 
+
+% --- References ---
+\bibliographystyle{unsrt}
+\bibliography{references}
+
 
 \end{document}
