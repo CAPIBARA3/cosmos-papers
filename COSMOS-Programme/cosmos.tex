@@ -93,7 +93,7 @@ This is the direct next step, extending our flight-proven COSMOS-Duo mission wit
 
 The key innovation of the COSMOS programme is to leverage the already developed high-energy observing capabilities from heritage missions and introduce arcminute-level source localisation via coordinated observations. This is a known concept in physics, for instance various GW observatories (LIGO, VIRGO and KAGRA) together can further constraint the sky coordinates of a signal than a single one \cite{missing}. The interplanetary network (IPN) \cite{missing} also used this technique with high-energy space telescopes to locate astrophysical sources. Now, we want to leverage the existing CubeSat technology for high energy astronomy to provide such measurements.
 
-The main idea is that comparing the signals from the same source detected by different satellites we can tighter constrain the origin of the source, in terms of celestial coordinates. For two satellites separated at baseline distance $\mathbf{B}$ and the time-delay between both detectors is $\delta t = t_2 - t_1$ then the direction of the source in the sky is given by %SUGGESTION:use \Delta instead of \delta
+The main idea is that comparing the signals from the same source detected by different satellites we can tighter constrain the origin of the source, in terms of celestial coordinates. For two satellites separated at baseline distance $\mathbf{B}$ and the time-delay between both detectors is $\Delta t = t_2 - t_1$ then the direction of the source in the sky is given by
 
 \begin{equation}
     c\Delta t = \hat{s} \mathbf{B}.
@@ -105,7 +105,7 @@ With two satellites, one can only constrain an hyperbolic region projected on th
 With three or more satellites, time-delay localisation is called \textit{triangulation}, which is a more familiar term. Let us call the time-delay between two satellites $i$ and $j$ $\delta t_{ij}$ and its baseline distance $\mathbf{B}_{ij}$. As before, solving the equation
 
 \begin{equation}
-	\left(\begin{matrix} \mathbf{B}_{21} \\ \mathbf{B}_{31} \end{matrix} \right) \hat{s} = c \left(\begin{matrix}\delta t_{21} \\ \Delta t_{31}\end{matrix}\right)
+    \left(\begin{matrix} \mathbf{B}_{21} \\ \mathbf{B}_{31} \end{matrix} \right) \hat{s} = c \left(\begin{matrix}\Delta t_{21} \\ \Delta t_{31}\end{matrix}\right)
 \end{equation}
 
 will provide us with the direction vector. Note that we don’t need to include $\mathbf{B}_{32}$ since it does not introduce more information to the system. This time, since this vector has two degrees of freedom
@@ -134,7 +134,7 @@ Note that in the term $\delta \mathbf{B} \cdot \hat{s}$, the perpendicular part 
 	\sigma_\theta = \frac{1}{|\mathbf{B}_\perp|} \sqrt{(c \sigma_t)^2 + \sigma_{B, ||} ^2}.
 \end{equation}
 
-For reference, given a time uncertainty $\sigma_t = 100\,\mathrm{ns}$ and a parallel part of B uncertainty $\sigma_{B, \parallel} \approx 10\,\mathrm{m}$, we obtain:
+For reference, given $\sigma_t = 100\\mathrm{ns}$ and $\sigma_{B, \parallel} \approx 10\\mathrm{m}$, we obtain:
 
 \begin{align}
 \sigma_\theta
@@ -143,14 +143,8 @@ For reference, given a time uncertainty $\sigma_t = 100\,\mathrm{ns}$ and a para
 &= \frac{31.6\,\mathrm{m}}{|\mathbf{B}_\perp|}
 \end{align}
 
-We deduce that $\sigma_\theta$ is inversely proportional to $|\mathbf{B}_\perp|$; as the baseline gets larger, the uncertainty decreases. To estimate it, we assign $|\mathbf{B}_\perp|$ some numerical values: $|\mathbf{B}_\perp| = 100\,\mathrm{m}, 250\,\mathrm{m}, 500\,\mathrm{m}, 1000\,\mathrm{m}$.
+Note that $\sigma_\theta \sim \frac{1}{\mathbf{B}_\perp$; as the baseline gets larger, the uncertainty decreases.
 
-\begin{align}
-\sigma_{\theta,1} &= \frac{31.6\,\mathrm{m}}{100\,\mathrm{m}} = 0.316\,\mathrm{rad} \approx 18.1^\circ \\
-\sigma_{\theta,2} &= \frac{31.6\,\mathrm{m}}{250\,\mathrm{m}} = 0.126\,\mathrm{rad} \approx 7.22^\circ \\
-\sigma_{\theta,3} &= \frac{31.6\,\mathrm{m}}{500\,\mathrm{m}} = 6.32 \times 10^{-2}\,\mathrm{rad} \approx 3.62^\circ \\
-\sigma_{\theta,4} &= \frac{31.6\,\mathrm{m}}{1000\,\mathrm{m}} = 3.16 \times 10^{-2}\,\mathrm{rad} \approx 1.81^\circ
-\end{align}
 
 \textcolor{red}{add a brief computation for the values from \ref{sec:technical_feasibility_and_heritage} ($\sigma_t = 100 {\ \rm ns}$, $\sigma_{B, ||} \approx 10 {\ \rm m}$)}
 
