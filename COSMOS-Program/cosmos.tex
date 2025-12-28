@@ -93,18 +93,19 @@ This is the direct next step, extending our flight-proven COSMOS-Duo mission wit
 
 The key innovation of the COSMOS program is to leverage the already developed high-energy observing capabilities from heritage missions and introduce arcminute-level source localization via coordinated observations. This is a known concept in physics, for instance various GW observatories (LIGO, VIRGO and KAGRA) together can further constraint the sky coordinates of a signal than a single one \cite{missing}. The interplanetary network (IPN) \cite{missing} also used this technique with high-energy space telescopes to locate astrophysical sources. Now, we want to leverage the existing CubeSat technology for high energy astronomy to provide such measurements.
 
-The main idea is that comparing the signals from the same source detected by different satellites we can tighter constrain the origin of the source, in terms of celestial coordinates. For two satellites separated at baseline distance $\mathbf{B}$ and the time-delay between both detectors is $\delta t = t_2 - t_1$ then the direction of the source in the sky is given by
+The main idea is that comparing the signals from the same source detected by different satellites we can tighter constrain the origin of the source, in terms of celestial coordinates. For two satellites separated at baseline distance $\mathbf{B}$ and the time-delay between both detectors is $\Delta t = t_2 - t_1$ then the direction of the source in the sky is given by
 
 \begin{equation}
-	c\Delta t = \hat{s} \mathbf{B}.
+    c\Delta t = \hat{s} \mathbf{B}.
 \end{equation}
+
 
 With two satellites, one can only constrain an hyperbolic region projected on the celestial sphere rather pointing out a specific direction. Our COSMOS-Duo mission is designed to demonstrate this method and the necessary technology, measuring around 10 bright bursts, without providing revolutionary data since it is a pathfinder.
 
 With three or more satellites, time-delay localization is called \textit{triangulation}, which is a more familiar term. Let us call the time-delay between two satellites $i$ and $j$ $\delta t_{ij}$ and its baseline distance $\mathbf{B}_{ij}$. As before, solving the equation
 
 \begin{equation}
-	\left(\begin{matrix} \mathbf{B}_{21} \\ \mathbf{B}_{31} \end{matrix} \right) \hat{s} = c \left(\begin{matrix}\delta t_{21} \\ \Delta t_{31}\end{matrix}\right)
+    \left(\begin{matrix} \mathbf{B}_{21} \\ \mathbf{B}_{31} \end{matrix} \right) \hat{s} = c \left(\begin{matrix}\Delta t_{21} \\ \Delta t_{31}\end{matrix}\right)
 \end{equation}
 
 will provide us with the direction vector. Note that we don’t need to include $\mathbf{B}_{32}$ since it does not introduce more information to the system. This time, since this vector has two degrees of freedom
@@ -133,7 +134,29 @@ Note that in the term $\delta \mathbf{B} \cdot \hat{s}$, the perpendicular part 
 	\sigma_\theta = \frac{1}{|\mathbf{B}_\perp|} \sqrt{(c \sigma_t)^2 + \sigma_{B, ||} ^2}.
 \end{equation}
 
-\textcolor{red}{add a brief computation for the values from \ref{sec:technical_feasibility_and_heritage} ($\sigma_t = 100 {\ \rm ns}$, $\sigma_{B, ||} \approx 10 {\ \rm m}$)}
+For reference, given $\sigma_t = 100 {\ \mathrm{ns}}$ and $\sigma_{B, \parallel} \approx 10 {\ \mathrm{m}}$, we obtain the values in table \ref{tab:angular_uncertainty}.
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{cccc}
+        \hline
+        \textbf{Case} & \textbf{Distance (m)} & $\boldsymbol{\sigma_\theta}$ \textbf{(rad)} & $\boldsymbol{\sigma_\theta}$ \textbf{(degrees)} \\
+        \hline
+        1 & 100  & 0.316  & 18.1 \\
+        2 & 250  & 0.126  & 7.22 \\
+        3 & 500  & 0.0632 & 3.62 \\
+        4 & 1000 & 0.0316 & 1.81 \\
+        \hline
+    \end{tabular}
+    \caption{Angular uncertainty as a function of satellite baseline distance}
+    \label{tab:angular_uncertainty}
+\end{table}
+
+
+
+Note that $\sigma_\theta \sim \frac{1}{\mathbf{B}_\perp}$, thus as the baseline gets larger, the uncertainty decreases.
+
+
 
 \textcolor{red}{how does the uncertainty improve with more than 3 satellites, i.e., once that the 2-degrees-of-freedom-problem are covered?}
 
