@@ -1,11 +1,12 @@
 \documentclass[11pt]{article}
 
 % --- Packages ---
-\usepackage{amsmath,amssymb}   % math symbols
+\usepackage{amsmath,amssymb}    % math symbols
 \usepackage{graphicx}           % figures
 \usepackage{array}              % tables
 \usepackage{booktabs}           % better tables
 \usepackage{geometry}           % page layout
+\usepackage{natbib}             % bibliography
 \usepackage{hyperref}           % clickable links
 \hypersetup{
     colorlinks=true,
@@ -44,9 +45,9 @@ for the \textbf{CAPIBARA Collaboration}\footnote{Collaboration for the Analysis 
 
 \section{Introduction and Motivation}\label{sec:introduction_and_motivation}
 
-A single event observed in August 2017 \cite{missing} presented the new era of multi-messenger astronomy, where coordinated observations across gravitational wave (GW), neutrino and eletromagnetic (EM) channels will unveil the physics of the most extreme scenarios and cosmic phenomena. High-energy ($\sim$1 keV to few MeV) transient phenomena, for instance ggamma-ray bursts (GRBs), magnetar flares and jet-driven events, are expected electromangetic counterparts to many GW sources \cite{missing} like binary neutron star mergers (BNS or NS-NS) or neutron star black hole mergers (NS-BH). Next-generation facilities such as Einstein Telescope (ET) \cite{missing}, Laser Interferometer Space Antenna (LISA) \cite{missing} and Cosmic Explorer \cite{missing} will detect hundreds of gravitational waves yearly, yielding a need for rapid, precise localisated observation of electromagnetic counterparts.
+A single event observed in August 2017 \cite{nature2017standardsiren} presented the new era of multi-messenger astronomy, where coordinated observations across gravitational wave (GW), neutrino and eletromagnetic (EM) channels will unveil the physics of the most extreme scenarios and cosmic phenomena. High-energy ($\sim$1 keV to few MeV) transient phenomena, for instance gamma-ray bursts (GRBs), magnetar flares and jet-driven events, are expected electromangetic counterparts to many GW sources \cite{nature2017standardsiren, Ioka_2001} like binary neutron star mergers (BNS or NS-NS) or neutron star black hole mergers (NS-BH). Next-generation facilities such as Einstein Telescope (ET) \cite{missing}, Laser Interferometer Space Antenna (LISA) \cite{missing} and Cosmic Explorer \cite{missing} will detect hundreds of gravitational waves yearly, yielding a need for rapid, precise localisated observation of electromagnetic counterparts.
 
-While flagship EM missions like NewAthena (X-ray) \cite{missing} and THESEUS ($\gamma$-ray) \cite{missing} are planned to cover the high-energy spectra in the 2030s, their observing schedules will be shared among many priorities and observation time is constrained. Simulations estimate $10^4$ detections per year with ET, alone from BNS mergers \cite{colombo2025}. This high rate of GW detections makes it impossible for flagship missions to follow-up, creating a pressing need for a dedicated, responsive, all-sky monitor observatory capable of prompt localization.
+While flagship EM missions like NewAthena (X-ray) \cite{Cruise_2024} and THESEUS ($\gamma$-ray) \cite{Amati_2018} are planned to cover the high-energy spectra in the 2030s, their observing schedules will be shared among many priorities and observation time is constrained. Simulations estimate $10^4$ detections per year with ET, alone from BNS mergers \cite{colombo2025}. This high rate of GW detections makes it impossible for flagship missions to follow-up, creating a pressing need for a dedicated, responsive, all-sky monitor observatory capable of prompt localization.
 
 The CAPIBARA Collaboration, a student-led research group, aims to address this need through the CAPIBARA-COSMOS program. We propose a modular mission that starts with the COSMOS-Duo mission as a pathfinder to build experience and gain knowledge, followed by the COSMOS-Net constellation for continuous, all-sky monitoring. The key goal of the COSMOS program is to leverage existing flight heritage and student-led missions, EIRSAT-1 and GRBAlpha for example, and innovate the next steps towards time-delay localization, a technique that will provide fast and precise alerts for follow-up observations of these transients. In this document, we detail the motivation for this program and our strategic path towards a full operational constellation, emphasizing feasible and modular objectives as well as student training.
 
@@ -87,11 +88,11 @@ Duo-1 and Duo-2 are two 3-6U CubeSats with the already tested and flight-proved 
 
 \subsection*{Phase 2: Constellation (2031-2040)}
 
-This is the direct next step, extending our flight-proven COSMOS-Duo mission with more satellites with our continued partnership with universities. We aim for launching between 4-6 more satellites, depending on funding and university partnerships at the moment. Together with COSMOS-Duo this will introduce a network of 6-8 CubeSat observatories continuously monitoring the full sky for high-energy transients and GW counterparts. The focus of this mission is scientific return and constellation operatation and coordination. The capabilities of COSMOS-Net to autonomously provide rapid and precise localizations at any time anywhere will integrate our mission into the broader multi-messenger alert network (GCN) \cite{missing}. Older or matlfunctioning satellites can be de-orbited when they reach the end of their lifetimes, and new satellites can be launched by continued or new partnership engagement. Thus the modular design proves to be sustainable in the long-term, providing uninterrupted observations.
+This is the direct next step, extending our flight-proven COSMOS-Duo mission with more satellites with our continued partnership with universities. We aim for launching between 4-6 more satellites, depending on funding and university partnerships at the moment. Together with COSMOS-Duo this will introduce a network of 6-8 CubeSat observatories continuously monitoring the full sky for high-energy transients and GW counterparts. The focus of this mission is scientific return and constellation operatation and coordination. The capabilities of COSMOS-Net to autonomously provide rapid and precise localizations at any time anywhere will integrate our mission into the broader multi-messenger alert network (GCN) \footnote{\href{https://gcn.nasa.gov}{https://gcn.nasa.gov}}. Older or matlfunctioning satellites can be de-orbited when they reach the end of their lifetimes, and new satellites can be launched by continued or new partnership engagement. Thus the modular design proves to be sustainable in the long-term, providing uninterrupted observations.
 
 \section{Time-Delay Localization}\label{sec:time-delay_localization}
 
-The key innovation of the COSMOS program is to leverage the already developed high-energy observing capabilities from heritage missions and introduce arcminute-level source localization via coordinated observations. This is a known concept in physics, for instance various GW observatories (LIGO, VIRGO and KAGRA) together can further constraint the sky coordinates of a signal than a single one \cite{missing}. The interplanetary network (IPN) \cite{missing} also used this technique with high-energy space telescopes to locate astrophysical sources. Now, we want to leverage the existing CubeSat technology for high energy astronomy to provide such measurements.
+The key innovation of the COSMOS program is to leverage the already developed high-energy observing capabilities from heritage missions and introduce arcminute-level source localization via coordinated observations. This is a known concept in physics, for instance various GW observatories (LIGO, VIRGO and KAGRA) together can further constraint the sky coordinates of a signal than a single one \cite{missing}. The interplanetary network (IPN) \footnote{\href{https://heasarc.gsfc.nasa.gov/w3browse/all/ipngrb.html}{https://heasarc.gsfc.nasa.gov/w3browse/all/ipngrb.html}} also used this technique with high-energy space telescopes to locate astrophysical sources. Now, we want to leverage the existing CubeSat technology for high energy astronomy to provide such measurements.
 
 The main idea is that comparing the signals from the same source detected by different satellites we can tighter constrain the origin of the source, in terms of celestial coordinates. For two satellites separated at baseline distance $\mathbf{B}$ and the time-delay between both detectors is $\Delta t = t_2 - t_1$ then the direction of the source in the sky is given by
 
@@ -214,6 +215,7 @@ All data and code used in this work is publicly available at the \href{https://g
 The authors declare no conflict of interest.
 
 % --- References ---
+% \bibliographystyle{plain}
 \bibliographystyle{unsrt}
 \bibliography{references}
 
