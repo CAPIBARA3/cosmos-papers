@@ -21,7 +21,6 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage{booktabs}
 \usepackage{tabularx}
 
 \setlist{nosep}
@@ -54,84 +53,70 @@
 
 %====================================================
 \section{Introduction}
-The Gamma-ray Analysis for Multi-Messenger Astrophysics (GAMMA) initiative is a project by the CAPIBARA Collaboration with the goal to study the high-energy, gamma-ray phenomena in the universe and launch a CubeSat to observe these events. In this white paper, we provide a set of compelling open problems that motivate the development and launch of such a mission.
+The Gamma-ray Analysis for Multi-Messenger Astrophysics (GAMMA) initiative is a project by the CAPIBARA Collaboration with the goal to study high-energy, gamma-ray phenomena in the universe and launch a CubeSat to observe these events. In this white paper, we provide a set of compelling open problems that motivate the development and launch of such a mission.
 
-In the 2020 decadal survey \cite{2020_astro_decadal}, it was pointed out that multi-band, that means acros the electromagnetic spectrum, and multi-messenger, that means combining different "messengers" such as light, GW and neutrino, detections were to be prioritized in the next years. Currently operating flagship gamma-ray observatories have long passed their main operation lifetimes, and new replacements are still in very early phases.
+In the 2020 decadal survey \cite{2020_astro_decadal}, it was pointed out that multi-band (across the electromagnetic spectrum) and multi-messenger (combining different cosmic messengers such as light, gravitational waves, and neutrinos) detections were to be prioritized in the coming years. Currently operating flagship gamma-ray observatories have long passed their design operational lifetimes, and new replacements are still in very early phases. Professionally and student-developed CubeSats with miniaturized detector technology have proven capable of successfully detecting gamma-ray bursts (GRBs) \cite{Murphy_2021, ripa2026grbalphavzlusat2grbbeta, Fiore_2020}.
 
-Professionally or student developed CubeSats with miniaturized detector technology have proven to be able to successfully detect gamma-ray bursts (GRBs) \cite{Murphy_2021, ripa2026grbalphavzlusat2grbbeta, Fiore_2020}. However, gamma-ray photons cannot be focused as with a traditional optical telescope. A good way around to accurately observing and locating GRBs is to perform triangulation with multiple satellites in orbit. Therefore, having multiple missions with large fields of view and good resolution capabilities is of very much importance for the proper study of this astrophysical phenomena.
-
-Missing clear explanation of what are gamma-ray bursts and why we need to send detectors to orbit?
-
+However, high-energy gamma-ray photons cannot be focused using traditional optical telescope designs. A highly effective method to accurately observe and locate GRBs is to perform triangulation using a constellation of multiple satellites in orbit. Therefore, having cooperative missions with wide fields of view and robust resolution capabilities is of paramount importance for the detailed study of these extreme astrophysical phenomena. Because Earth's atmosphere completely blocks gamma-ray radiation, space-based detectors are fundamentally required to capture these brief, intense flashes of high-energy light, which originate from catastrophic cosmic events like the core-collapse of massive stars or the coalescence of binary neutron stars.
 
 %====================================================
 \section{Multi-Messenger Astronomy}\label{sec:mma}
 
-
+% Left empty for companion branch work
 
 %====================================================
 \section{Cosmology: GRBs as High-$z$ Probes}
 
 \subsection{Cosmological Models and Tensions}
 
-Since the late 1920s, we know that the universe is in expansion \cite{Hubble_1929, Lemaitre_1927}, this lead to the development of the 'Big Bang theory' later confirmed by the observation of the Cosmic Microwave background (CMB) \cite{Penzias_Wilson_1965, Dicke_1965}. In the 1990s, the expansion of the universe was found to be accelerated using Ia SNe observations \cite{Riess_1998, Perlmutter_1999}, motivating the description of the expansion rate as a time-dependant parameter $H(t)$ (Hubble parameter), with $H_0 = H(t_0)$. The relation between the distance $d_L$ and the redshift $z \propto v_\text{radial}$ is then given by the luminosity distance function:
+Since the late 1920s, it has been established that the universe is expanding \cite{Hubble_1929, Lemaitre_1927}, a discovery that led to the formulation of the Big Bang theory, later confirmed by the observation of the Cosmic Microwave Background (CMB) \cite{Penzias_Wilson_1965, Dicke_1965}. In the late 1990s, the expansion of the universe was found to be accelerating via Type Ia Supernovae observations \cite{Riess_1998, Perlmutter_1999}, motivating the description of the expansion rate as a time-dependent parameter $H(t)$ (the Hubble parameter), with $H_0 \equiv H(t_0)$ denoting its present value. The relation between the luminosity distance $d_L$ and the cosmological redshift $z$ is given by:
 
-$$
-d_L (z, \overline\Omega) = (1+z) \frac{c}{H_0} \int_0 ^{z^\prime} \frac{dz^\prime}{E(z)}
-$$
+\begin{equation}
+d_L (z) = (1+z) \frac{c}{H_0} \int_0^{z} \frac{dz^\prime}{E(z^\prime)}
+\end{equation}
 
-where $H_0$ is the Hubble-Lemaître constant (the present time rate of expansion) and $E(z)$ is the dimensionless Hubble parameter, which is different regarding the cosmological model one considers. The current standard model in cosmology $\Lambda$CDM assumes the dominance of cold dark matter (CDM) and a cosmological constant denoted $\Lambda$ \cite{missing}. Deriving from the Friedmann equations \cite{missing} (which is a description of the universe treating its components as fluids) we obtain
-$$
-E^2(z) = \left(\frac{H(t)}{H_0}\right)^2 = \Omega_r a^{-4} + \Omega_m a^{-3} + \Omega_k a^{-2} + \Omega_\Lambda
-$$
-where $a$ is the scale factor set to $a(t_0) = a_0 = 1$ and $\Omega_i$ are the energy density parameters for each component of the Universe's energy. According to $\Lambda$CDM these are the components contributing to the total energy density of the universe \cite{missing}:
+where $c$ is the speed of light, $H_0$ is the Hubble-Lemaître constant, and $E(z)$ is the dimensionless Hubble parameter, which varies depending on the specific cosmological model under consideration. 
 
-$$
-\begin{cases}
-	\text{radiation}: \Omega_r \\
-	\text{matter}: \Omega_m \\
-	\text{curvture (geometric)}: \Omega_k \\
-	\text{dark energy}: \Omega_\Lambda
-\end{cases}
-$$
+The current standard model of cosmology, $\Lambda$CDM, assumes the dominance of cold dark matter (CDM) and a cosmological constant $\Lambda$ \cite{missing}. Derived from the Friedmann equations, which treat the components of the universe as perfect fluids, the dimensionless expansion rate is expressed as:
+\begin{equation}
+E^2(z) = \left(\frac{H(z)}{H_0}\right)^2 = \Omega_r (1+z)^4 + \Omega_m (1+z)^3 + \Omega_k (1+z)^2 + \Omega_\Lambda
+\end{equation}
+where $\Omega_i$ represents the present-day energy density parameters for radiation ($\Omega_r$), matter ($\Omega_m$), spatial curvature ($\Omega_k$), and dark energy ($\Omega_\Lambda$). Typically, a spatially flat universe is assumed ($\Omega_k = 0$) with a negligible radiation contribution ($\Omega_r \approx 0$), leading to the constraint $\Omega_\Lambda + \Omega_m = 1$. In baseline reference configurations where cosmological parameters are fixed, standard values such as $\Omega_m = 0.3$, $\Omega_\Lambda = 0.7$, and $h = 0.7$ (where $H_0 = 100h\ \mathrm{km/s/Mpc}$) are commonly adopted, in excellent agreement with large-scale structure measurements.
 
-Most of the time, a \textit{flat} $\Lambda$CDM model is assummed $\Omega_\Lambda + \Omega_m = 1$ with $\Omega_k = \Omega_r = 0$ (due to flatness and negligible contribution of radiation). When not trying to constraint the cosmology, and assuming a standard cosmological $\Omega_\Lambda = 1-\Omega_m = h_0 = 0.7$ is also assumed, agreeing enough with estimated values for these parameters and $h_0 := H_0/100$.
-
-In recent times, attention has been drawn to the so-called 'Hubble Tension', an open problem in cosmology in which measurements of $H_0$ don't agree between early-universe CMB and late-time local distance ladder observations \cite{Di_Valentino_2021, riess2025perfecthostjwstcepheid, Tristram_2024}. More recently, in the era of 'precision cosmology' this tension, alongside the $\sigma_8$ \cite{missing} and $\Omega_m$ \cite{missing, see rebecca} tensions have become even more obvious. These tensions alongside the fine-tuning problem of the cosmological constant $\Lambda$ \cite{missing} and the growing evidence of dynamical dark energy (DDE) \cite{lodha2025extendeddarkenergyanalysis} contrasting previous results and assumptions has motivated the search of alternative methods to measure cosmological parameters and test proposed alternative models.
+In recent years, considerable attention has focused on the ``Hubble Tension,'' an unresolved discrepancy where local direct measurements of $H_0$ using the distance ladder disagree with early-universe CMB observations \cite{Di_Valentino_2021, riess2025perfecthostjwstcepheid, Tristram_2024}. In the era of precision cosmology, this conflict—alongside secondary anomalies in the matter fluctuation amplitude $\sigma_8$ and the matter density $\Omega_m$ \cite{missing}—has become increasingly significant. These tensions, combined with the theoretical fine-tuning problem of $\Lambda$ \cite{missing} and growing tentative evidence for a dynamical dark energy (DDE) component \cite{lodha2025extendeddarkenergyanalysis}, motivate the development of alternative, independent cosmic distance indicators to validate or extend the standard model.
 
 \subsection{GRBs as Cosmological Probes}
 
-Gamma-ray bursts are amongs the most luminous astromical events in the Universe and are visible at large distances, making their potential use as high-$z$ cosmological probes compelling. However, GRBs are not standard candles, and we rely on empirical relations between observables to compute our luminosity distance and thus test different cosmologies. Multiple potential relations to 'standardize' GRBs have been proposed \cite{ghirlanda200X}.
+Gamma-ray bursts are among the most luminous astronomical events in the Universe and are visible at high redshifts, making their potential use as cosmological probes highly compelling. However, GRBs are not standard candles, and we must rely on empirical relations between observables to compute our luminosity distance and thus test different cosmologies. Multiple potential relations to ``standardize'' GRBs have been proposed \cite{ghirlanda200X}. 
 
-When utilizing GRBs to probe the cosmological parameters, we encounter the circularity problem, which is that we need to assume a cosmology $\overline\Omega$ in order to compute the fit to the empirical relation, which we want to use to constraint the parameters. For example, the Amati relation relates the intrinsic spectral peak energy $(E_\text{peak})$ and the isotropic equivalent energy $(E_\text{iso})$ and is written as:
-$$
-E_\text{p,i} = a \cdot E_\text{iso}^b
-$$
+When utilizing GRBs to probe cosmological parameters, we encounter the circularity problem: a specific cosmology $\overline{\Omega}$ must be assumed a priori to compute the intrinsic properties from observed quantities and fit the empirical relation, which is then used to constrain the very same parameters. For example, the Amati relation connects the intrinsic spectral peak energy $E_{\mathrm{p,i}}$ and the isotropic equivalent energy $E_{\mathrm{iso}}$ via:
+\begin{equation}
+E_{\mathrm{p,i}} = a \cdot E_{\mathrm{iso}}^b
+\end{equation}
+Here, $E_{\mathrm{iso}}$ is computed from the observed bolometric fluence $\mathcal{F}$ relying on the luminosity distance by:
+\begin{equation}
+E_{\mathrm{iso}}(\overline{\Omega}) = \frac{4\pi \mathcal{F} d_L^2(z, \overline{\Omega})}{1+z}
+\end{equation}
+In this case, in order to compute the calibration parameters $(a,b)$, a baseline cosmology must be adopted. The circularity problem can be avoided by evaluating the empirical relation fit across a grid of possible cosmologies, where the correct model minimizes the intrinsic scatter within the relation.
 
-this can be used to contraint the cosmology since $E_\text{iso}$ is computed from the observed fluence $\mathcal{F}$ relying on the luminosity distance by
-$$
-E_\text{iso} (\overline\Omega) = 4\pi \mathcal{F} d_L (z, \overline\Omega) /(1+z)
-$$
+Key instrument requirements for this purpose include a broad energy range (typically from $10\ \mathrm{keV}$ up to several $\mathrm{MeV}$) to ensure the spectral peak energy $E_{\mathrm{p, i}}$ is captured, alongside a sufficient energy resolution ($\Delta E/E \approx 10$--$20\%$) to accurately fit the spectrum. Additionally, a wide field of view is critical to maximize the detection rate of these short-lived transient events, drastically improving the statistical power of the catalog. 
 
-In this case, in order to compute $(a,b)$ we need to assume $\overline\Omega$. The circularity problem is avoided by computing the empirical relation fit for a set of possible cosmologies, among which the 'best cosmology' is assumed to be the one with the least scatter in the empirical relation.
+According to Fisher matrix forecasts, roughly 800 to 1,000 detections with an average measurement uncertainty of $0.10\ \mathrm{dex}$ (corresponding to approximately $25\%$ error on the energy observables) are required to constrain the matter density parameter $\Omega_m$ to a $10\%$ precision level using the Amati relation. Reaching a $1\%$ precision scale demands sample sizes in the tens of thousands due to the hard mathematical floor established by the intrinsic scatter of these relations.
 
-Key instrumentation requirements for this purpose is a broad energy range, including high-energy $\gamma$-ray sensitivity and enough energy resolution, allowing to accurately measuring $E_\text{peak}$. Additionally, a broad field of view contributes to increasing the chances of detecting this short-lived transient events, more data . According to estimates \cite{alcaide2026}, $0000$ detections with average uncertainty of $\sigma_E = 0.00$ are required to constrain cosmological parameters to a $10\%$ error with $99\%$ certainty.
-
-While GRBs are sensitive to dark energy and matter energy density parameters fairly well, since there are no close anchors, GRBs do badly constraint $H_0$, indeed it's introduction as a free parameter brings in a degeneracy with the empirical relation. That is why GRBs are better used as a complementary information to another probe, such as GW luminosity distance data. \cite{alcaide2026}
-
-\textcolor{red}{how much energy resolution for $X\%$ error on energy? What about other empirical relation's requirements?}
-
-Key instrument requirements for this purpose include a broad energy range (typically from $10\ \mathrm{keV}$ up to several $\mathrm{MeV}$) to ensure the spectral peak energy $E_\text{p, i}$ is not missed, alongside a sufficient energy resolution $(\Delta E/E \approx 10-20 \%)$ to accurately fit the spectrum. Additionally, a broad field of view contirbutes to increasing the chances of detecting these short-lived transient events, drastically improving the statistical power of the cataloag. According to Fisher matrix forecasts, roughly 800 to 1,000 detections with an average measurement uncertainty of $0.10\ \mathrm{dex}$ (which translates to approximately $25\%$ error on the energy observables) are required to constrain the matter density parameter $\Omega_m$ to a $10\%$ precision level using the Amati relation. Reaching a $1\%$ precision scale requires a sample sizes in the tens of thousands due to the hard mathematical floor established by the intrinsic scatter of these relations.
-
-While the Amati relation relies solely on prompt gamma-ray emission, other empirical relations can tighten this intrinsic scatter but pose stricter multi-wavelength requirements. For instance, the Ghirlanda relation connects the peak energy to the collimated true energy $(E_\gamma)$ and features a significantly lower intrinsic scatter $(\approx 0.10 \ \mathrm{dex})$. However, utilizing it requires precise X-ray or optical follow-up to observe the afterglow jet break time and calculate the opening angle $\theta_j$. Because GRBs lack low-redshift anchors, they struggle to independently constrain the Hubble constant $H_0$, creating a degeneracy with empirical relation's zero-point. Therefore, GRBs are most powerful when utilize as complementary probes alongside gravitational wave luminosity distance data.
+While the Amati relation relies solely on prompt gamma-ray emission, other empirical relations can tighten this intrinsic scatter but pose stricter multi-wavelength requirements. For instance, the Ghirlanda relation connects the peak energy to the collimated true energy $E_\gamma$ and features a significantly lower intrinsic scatter ($\approx 0.10\ \mathrm{dex}$). However, utilizing it requires precise X-ray or optical follow-up to observe the afterglow jet break time and calculate the opening angle $\theta_j$. Furthermore, because GRBs lack low-redshift anchors, they struggle to independently constrain the Hubble constant $H_0$, creating a degeneracy with the empirical relation's zero-point. Therefore, GRBs are most powerful when utilized as complementary probes alongside gravitational wave luminosity distance data.
 
 \subsection{Multi-Messenger Cosmology}
 
-\textbf{what does GW work so well together with GRB when constraining cosmologies? first write \ref{sec:mma}, since it build on that}
+The integration of gravitational wave (GW) standard sirens and gamma-ray bursts provides an exceptionally powerful multi-messenger framework for breaking cosmological parameter degeneracies. While standard sirens yield absolute, calibration-free luminosity distances that directly constrain $H_0$, they suffer from a strong inclination-distance degeneracy and are currently limited to the relatively local universe ($z \lesssim 0.1$ for binary neutron star mergers). Conversely, GRBs can be observed up to the highest redshifts ($z \gtrsim 9$), making them excellent probes of matter density $\Omega_m$ and dark energy evolution $w(z)$. By combining the local absolute calibration of GW standard sirens with the high-redshift lever arm of GRB empirical relations, the mutual parameter degeneracies are effectively broken, yielding significantly tighter joint constraints.
 
+\begin{figure}
+    \includegraphics[width=0.8\linewidth]{code/complementarity.pdf}
+    \caption{Simple diagram demonstrating the concept of complementarity behind the synergies between GRB and GW observations for cosmological parameter inference.}
+\end{figure}
 
 \subsection{GRB Statistics Estimations}
 
-In order to compute cosmological parameters with accuracy, a large sample of GRBs is needed so that the fit of the empirical relation over the cosmological parameter space has the lowest error uncertainty possible. We compute the number of GRBs necessary to observe with average measurement uncertainty $(0.01 \mathrm{dex} < \sigma_\mathrm{obs} < 0.2 \mathrm{dex})$ to obtain $10\%$ and $1\%$ precision on $\Omega_m$. For the error uncertainty propagation, we compare 3 different standard empirical relations: Amati, Yonetoku, and Ghirlanda relation \citep{ghirlanda200X}.
+In order to compute cosmological parameters with accuracy, a large sample of GRBs is needed so that the fit of the empirical relation over the cosmological parameter space has the lowest error uncertainty possible. We compute the number of GRBs necessary to observe with average measurement uncertainty $(0.01 \mathrm{dex} < \sigma_\mathrm{obs} < 0.2 \mathrm{dex})$ to obtain $10\%$ and $1\%$ precision on $\Omega_m$. For the error uncertainty propagation, we compare three different standard empirical relations: the Amati, Yonetoku, and Ghirlanda relations \citep{ghirlanda200X}.
 
 \begin{itemize}
     \item Amati: $E_\mathrm{p, i} \propto E_\mathrm{iso}^a$
@@ -141,59 +126,63 @@ In order to compute cosmological parameters with accuracy, a large sample of GRB
 
 Where $a,b,c$ are free parameters, $L_\mathrm{iso}$ is the isotropic luminosity, which is related to the luminosity distance by $d_L (z) = (L_\mathrm{iso} / 4\pi F)^{1/2}$, and $E_\gamma$ is the collimation corrected energy, $E_\gamma = E_\mathrm{iso} (1-\cos \theta_j)$ with $\theta_j$ being the jet opening angle. $E_\gamma$ can only be computed if $\theta_j$ is known, i.e., if the jet break time $t_\mathrm{break}$ is observed in the afterglow, thus highlighting the importance of rapid alerts and follow-up observations in multiple energy ranges.
 
-Since GRBs are supposed to be jet-driven phenomena, due to relativistic aberration an observer only 'sees' photons within a cone of aperture defined by $\theta_\Gamma \propto \Gamma^{-1}$ where $\Gamma$ is the bulk Lorentz factor of the emitting material. This emitting material gets slowed down by the medium around the GRB source; thus as the jet travels, $\Gamma$ diminishes and $\theta_\Gamma$ increases. During this time the observer perceives increasing luminosity, since the cone diameter gets larger, and then a peak and an afterglow as the emission decreases. The turning point happens when $\theta_\Gamma = \theta_j$, then the totality of the jet's surface is visible and there is a sudden decrease in luminosity. If we approximate the afterglow emission as a linear function over time, then the slope becomes smaller.
+Since GRBs are jet-driven phenomena, due to relativistic aberration an observer only sees photons within a cone of aperture defined by $\theta_\Gamma \propto \Gamma^{-1}$, where $\Gamma$ is the bulk Lorentz factor of the emitting material. This emitting material gets slowed down by the medium around the GRB source; thus, as the jet travels, $\Gamma$ diminishes and $\theta_\Gamma$ increases. During this time the observer perceives increasing luminosity, since the cone diameter gets larger, followed by a peak and an afterglow as the emission decreases. The turning point happens when $\theta_\Gamma = \theta_j$, at which point the totality of the jet's surface is visible and there is a sudden decrease in luminosity. If we approximate the afterglow emission as a linear function over time, then the slope becomes smaller.
 
 To compute the estimations on the sample size for each relation, we employ the Fisher information matrix. For any relation $X-Y$, $Y$ corresponds to a different observable in each relation (see Table \ref{tab:grb}).
-$$
-\log_{10} Y = a + b \log_{10} E_{p,i}
-$$
-where $Y$ is mathematically related to $d_L(z)$, we shall write
-$$
+\begin{equation}
+\log_{10} Y = a + b \log_{10} E_{\mathrm{p,i}}
+\end{equation}
+where $Y$ is mathematically related to $d_L(z)$ by:
+\begin{equation}
 Y = 4\pi d_L^2(z) \cdot X_\mathrm{obs} \cdot (1+z)^\alpha
-$$
-Given the distance modulus
-$$
-\mu(z) = 5 \log_{10} \left(\frac{d_L (z)}{\mathrm{Mpc}}\right) +25
-$$
-Then by substituting into the distance modulus we find
-$$
-\mu(z) = \frac{5}{2} \left[a + b\log_{10} E_\mathrm{p,i} - \log_{10} X_\mathrm{obs} - \alpha \log_{10} (1+z) - \log_{10}(4\pi) \right] + 25.
-$$
+\end{equation}
+Given the distance modulus expression:
+\begin{equation}
+\mu(z) = 5 \log_{10} \left(\frac{d_L (z)}{\mathrm{Mpc}}\right) + 25
+\end{equation}
+we substitute $d_L(z)$ into the distance modulus equation to find:
+\begin{equation}
+\mu(z) = \frac{5}{2} \left[a + b\log_{10} E_\mathrm{p,i} - \log_{10} X_\mathrm{obs} - \alpha \log_{10} (1+z) - \log_{10}(4\pi) \right] + 25
+\end{equation}
 
 \begin{table}[htbp]
     \centering
     \caption{Gamma-Ray Burst Relations}
     \label{tab:grb}
     \small
-    \begin{tabular}{l l l c}
-        \hline
+    \begin{tabular postseason{l | l | l | c}}
         \textbf{Relation} & $\mathbf{Y}$ & $\mathbf{X_\mathrm{obs}}$ & \textbf{$\alpha$} \\
         \hline
-        Amati & $E_{\mathrm{iso}}$ & $S_\mathrm{bolo}$ (bolometric fluence) & $-1$ \\
-        \hline
+        Amati & $E_{\mathrm{iso}}$ & $S_\mathrm{bolo}$ (bolometric fluence)\\
         Ghirlanda & $E_{\gamma}$ & $S_\mathrm{bolo} (1-\cos\theta_j)$ & $-1$ \\
-        \hline
-        Yonetoku & $L_{\mathrm{iso}}$ & $P_{bolo}$ (peak flux) & $0$ \\
+        Yonetoku & $L_{\mathrm{iso}}$ & $P_{\mathrm{bolo}}$ (peak flux) & $0$ \\
         \hline
     \end{tabular}
 \end{table}
 
-Then, applying standard error propagation taking into account the intrinsic physical scatter $\sigma_\mathrm{int}$ together with the measurement uncertainties follows:
-$$
+Applying standard error propagation while taking into account both the intrinsic physical scatter $\sigma_\mathrm{int}$ and the experimental measurement uncertainties yields:
+\begin{equation}
 \sigma_\mu = \frac{5}{2} \sqrt{\sigma_\mathrm{int}^2 + b^2 \sigma_{\log E_\mathrm{p,i}}^2 + \sigma_{\log X_\mathrm{obs}}^2}
-$$
+\end{equation}
 
-The intrinsic error represents a fixed, intrinsic variation in the empirical relation. It ranges from $\sigma_\mathrm{int} \approx 0.10 \mathrm{dex}$ for Ghirlanda to $\sigma_\mathrm{int} \approx 0.30 \mathrm{dex}$ for Amati and Yonetoku. In order to project these errors into the computation of a cosmological parameter such as $\Omega_m$, we calculate the Fisher Information Matrix $F$. 
+The intrinsic error represents a fixed, physical variation in the empirical relationship itself. It ranges from $\sigma_\mathrm{int} \approx 0.10 \mathrm{dex}$ for the Ghirlanda relation to $\sigma_\mathrm{int} \approx 0.30 \mathrm{dex}$ for the Amati and Yonetoku relations. In order to project these errors into the computation of cosmological parameters like $\Omega_m$, we calculate the Fisher Information Matrix $F$.
 
-For a single observable $\mu(z)$, the Fisher information with respect to the parameter $\Omega_m$ is given by $F = \frac{1}{\sigma_\mu^2} \left( \frac{\partial \mu}{\partial \Omega_m} \right)^2$. Assuming a sample of $N$ GRBs, the total information scales linearly with $N$. By setting the targeted parameter variance to $\Delta \Omega_m^2 = 1 / F_{\mathrm{total}}$, we can invert the Fisher Matrix to estimate the required sample size:
-$$
+For a single distance modulus datum $\mu(z)$, the information contribution regarding $\Omega_m$ is given by:
+\begin{equation}
+F = \frac{1}{\sigma_\mu^2} \left( \frac{\partial \mu}{\partial \Omega_m} \right)^2
+\end{equation}
+Assuming a sample size of $N$ statistically independent GRBs distributed across redshift, the cumulative information matrix scales linearly such that $F_{\mathrm{total}} = N \cdot \langle F \rangle$. By setting our target standard error to $\Delta \Omega_m = 1 / \sqrt{F_{\mathrm{total}}}$, we can invert the relationship to solve for the necessary sample size $N$:
+\begin{equation}
 N = \frac{\sigma_\mu^2}{(\Delta \Omega_m)^2 \left\langle \left( \frac{\partial \mu}{\partial \Omega_m} \right)^2 \right\rangle}
-$$
-The results of our simulations mapping $N$ against observational uncertainty are shown in Figure \ref{fig:grb_stats}. As expected, the Ghirlanda relation requires a significantly smaller cosmological sample ($\sim 27-40$ GRBs) to achieve competitive precision due to its tight intrinsic scatter. However, it is observationally limited by the rare detection of explicit afterglow jet breaks. Conversely, the Amati and Yonetoku relations demand much larger catalogs ($\sim 150-241$ GRBs) to overcome their $\approx 0.30 \mathrm{dex}$ intrinsic scatter.
+\end{equation}
 
-\begin{figure}
-    \includegraphics[width=0.8\pagewidth]{grb\_estimates/grb\_statistics\_estimates.pdf}
-    \caption{Estimates of required sample of observed GRB to constrain $\Omega_m$ to $10\%$ and $1\%$ uncertainty computed for the Amati, Yonetoku and Ghirlanda relation.}
+The results of our numerical simulations evaluating $N$ against changing average observational uncertainties are presented in Fig.~\ref{fig:grb_stats}. To achieve a $10\%$ precision constraint on $\Omega_m$, the Ghirlanda relation requires a small sample footprint ($\sim 27$--$40$ GRBs) due to its tight intrinsic scatter. However, it remains constrained by the subset of events exhibiting visible afterglow jet breaks. Conversely, the Amati and Yonetoku relations require noticeably larger catalogs ($\sim 150$--$241$ GRBs) to counter their higher $0.30\mathrm{dex}$ intrinsic variance, but offer a more viable path forward due to the ease of obtaining bolometric fluences and peak fluxes from simple light curves.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{code/grb_statistics_estimates.pdf}
+    \caption{Estimates of the required sample size of observed GRBs to constrain $\Omega_m$ to $10\%$ and $1\%$ precision, computed for the Amati, Yonetoku, and Ghirlanda relations.}
+    \label{fig:grb_stats}
 \end{figure}
 
 %====================================================
@@ -232,9 +221,9 @@ The results of our simulations mapping $N$ against observational uncertainty are
 
 % Acknowledgments
 
-\begin{acknowledgements}
-	The authors are grateful are grateful to members of the CAPIBARA Collaboration for useful discussions and feedback. The authors \href{https://capibara3.github.io/contact.html}{welcome feedback}.
-\end{acknowledgements}
+\begin{acknowledgments}
+	The authors are grateful to members of the CAPIBARA Collaboration for useful discussions and feedback]. The authors \href{https://capibara3.github.io/contact.html}{welcome feedback}.
+\end{acknowledgments}
 
 % Bibliography
 \bibliographystyle{apsrev4-2}
