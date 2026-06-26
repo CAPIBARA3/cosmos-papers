@@ -32,14 +32,14 @@
 
 \title{Gamma-ray Analysis for Multi-Messenger Astrophysics: GAMMA}
 
-\author{Joan Alcaide-Núñez}
-\affiliation{Department of Physics, Ludwig-Maximilians-Universität München, Geschwister-Scholl-Platz 1, D-80539 München, Germany}
+\author{Alessandro Sabia}
+\affiliation{affil}
 
 \author{Martina Solano Soto}
-\affiliation{affiliation}
+\affiliation{affil}
 
-\author{Alessandro Sabia}
-\affiliation{affiliation}
+\author{Joan Alcaide-Núñez}
+\affiliation{Department of Physics, Ludwig-Maximilians-Universität München, Geschwister-Scholl-Platz 1, D-80539 München, Germany}
 
 \date{\today}
 
@@ -94,9 +94,9 @@ $$
 \end{cases}
 $$
 
-Most of the time, a \textit{flat} $\Lambda$CDM model is assummed $\Omega_\Lambda + \Omega_m = 1$ with $\Omega_k = \Omega_r = 0$ (due to flatness and negligible constribution of radiation). When not trying to constraint the cosmology, and assuming a standard cosmological $\Omega_\Lambda = 1-\Omega_ = h_0 = 0.7$ is also assumed, agreeing enough with estimated values for these parameters and $h_0 := H_0/100$.
+Most of the time, a \textit{flat} $\Lambda$CDM model is assummed $\Omega_\Lambda + \Omega_m = 1$ with $\Omega_k = \Omega_r = 0$ (due to flatness and negligible contribution of radiation). When not trying to constraint the cosmology, and assuming a standard cosmological $\Omega_\Lambda = 1-\Omega_m = h_0 = 0.7$ is also assumed, agreeing enough with estimated values for these parameters and $h_0 := H_0/100$.
 
-In recent times, attention has been drawn to the so-called 'Hubble Tension', an open problem in cosmology in which measurements of $H_0$ don't agree between early-universe CMB and late-time local distance ladder observations \cite{Di_Valentino_2021, riess2025perfecthostjwstcepheid, Tristram_2024}. More recently, in the era of 'precision cosmology' this tension, alongside the $\sigma_8$ \cite{missing} and $\Omega$ \cite{missing, see rebecca} tensions have become even more obvious. These tensions alongside the fine-tuning problem of the cosmological constant $\Lambda$ \cite{missing} and the growing evidence of dynamical dark energy (DDE) \cite{lodha2025extendeddarkenergyanalysis} contrasting previous results and assumptions has motivated the search of alternative methods to measure cosmological parameters and test proposed alternative models.
+In recent times, attention has been drawn to the so-called 'Hubble Tension', an open problem in cosmology in which measurements of $H_0$ don't agree between early-universe CMB and late-time local distance ladder observations \cite{Di_Valentino_2021, riess2025perfecthostjwstcepheid, Tristram_2024}. More recently, in the era of 'precision cosmology' this tension, alongside the $\sigma_8$ \cite{missing} and $\Omega_m$ \cite{missing, see rebecca} tensions have become even more obvious. These tensions alongside the fine-tuning problem of the cosmological constant $\Lambda$ \cite{missing} and the growing evidence of dynamical dark energy (DDE) \cite{lodha2025extendeddarkenergyanalysis} contrasting previous results and assumptions has motivated the search of alternative methods to measure cosmological parameters and test proposed alternative models.
 
 \subsection{GRBs as Cosmological Probes}
 
@@ -128,21 +128,22 @@ While the Amati relation relies solely on prompt gamma-ray emission, other empir
 
 \textbf{what does GW work so well together with GRB when constraining cosmologies? first write \ref{sec:mma}, since it build on that}
 
+
 \subsection{GRB Statistics Estimations}
 
-In order to compute cosmological parameteres with accuracy a large sample of GRBs is needed, so that the fit of the empirical relation and over the cosmological parameter space has as lowest error uncertainty as possible. We compute the number of GRBs necessary to observe with average measuremeng uncertainty $(0.01 \mathrm{dex}< \sigma_\mathrm{obs} < 0.2 \mathrm{dex})$ to obtain $10\%$ and $1\%$ precision on $\Omega_m$. For the the error uncertainty propagation we compare 3 different standard empirical relations: Amati, Yonetoky, Ghirlanda relation \citep{ghirlanda200X}.
+In order to compute cosmological parameters with accuracy, a large sample of GRBs is needed so that the fit of the empirical relation over the cosmological parameter space has the lowest error uncertainty possible. We compute the number of GRBs necessary to observe with average measurement uncertainty $(0.01 \mathrm{dex} < \sigma_\mathrm{obs} < 0.2 \mathrm{dex})$ to obtain $10\%$ and $1\%$ precision on $\Omega_m$. For the error uncertainty propagation, we compare 3 different standard empirical relations: Amati, Yonetoku, and Ghirlanda relation \citep{ghirlanda200X}.
 
 \begin{itemize}
-	\item Amati: $E_\mathrm{p, i} \propto E_\mathrm{iso}^a$
-	\item Yonetoku: $E_\mathrm{p, i} \propto L_\mathrm{iso}^b$
-	\item Ghirlanda: $E_\mathrm{p, i} \propto E_\gamma ^c$
+    \item Amati: $E_\mathrm{p, i} \propto E_\mathrm{iso}^a$
+    \item Yonetoku: $E_\mathrm{p, i} \propto L_\mathrm{iso}^b$
+    \item Ghirlanda: $E_\mathrm{p, i} \propto E_\gamma ^c$
 \end{itemize}
 
-Where $a,b,c$ are free parameters, $L_\mathrm{iso}$ is the isotropic Luminosity, which is related to the luminosity distance by $d_L (z) = (L_\mathrm{iso} / 4\pi F)^{1/2}$, and $E_\gamma$ is the collimation corrected energy, $E_\gamma = E_\mathrm{iso} (1-\cos \theta_j)$ with $\theta_j$ being the jet opening angle. $E_\gamma$ can only be computed if $\theta_j$ is known, i.e., if the jet break time $t_\mathrm{break}$ is observed in the afterglow, thus highlighting the importance of rapid alerts and follow-up observations in multiple energy ranges.
+Where $a,b,c$ are free parameters, $L_\mathrm{iso}$ is the isotropic luminosity, which is related to the luminosity distance by $d_L (z) = (L_\mathrm{iso} / 4\pi F)^{1/2}$, and $E_\gamma$ is the collimation corrected energy, $E_\gamma = E_\mathrm{iso} (1-\cos \theta_j)$ with $\theta_j$ being the jet opening angle. $E_\gamma$ can only be computed if $\theta_j$ is known, i.e., if the jet break time $t_\mathrm{break}$ is observed in the afterglow, thus highlighting the importance of rapid alerts and follow-up observations in multiple energy ranges.
 
-Since GRBs are supposed to be jet-drive phenomena, due to relativistic aberration an observer only 'see' photons within a cone of aperture defined by $\theta_\Gamma \propto \Gamma^{-1}$ where $\Gamma$ is the bulk Lorentz factor of the emitting material. This emitting material gets slowed down by the medium around the GRBs source, thus as the jet travels, $\Gamma$ diminishes and $\theta_\Gamma$ increases. During this time the observer perceives increasing luminosity, since the cone diameter gets larger, and then a peak and an afterglow as the emission decreases. The turning point happens when $\theta_\Gamma = \theta_j$, then the totality of the jet's surface is visible and there is a sudden decrese in luminosity. If we approximate the afterglow emission as al inear function over time, then the slope becomes smaller.
+Since GRBs are supposed to be jet-driven phenomena, due to relativistic aberration an observer only 'sees' photons within a cone of aperture defined by $\theta_\Gamma \propto \Gamma^{-1}$ where $\Gamma$ is the bulk Lorentz factor of the emitting material. This emitting material gets slowed down by the medium around the GRB source; thus as the jet travels, $\Gamma$ diminishes and $\theta_\Gamma$ increases. During this time the observer perceives increasing luminosity, since the cone diameter gets larger, and then a peak and an afterglow as the emission decreases. The turning point happens when $\theta_\Gamma = \theta_j$, then the totality of the jet's surface is visible and there is a sudden decrease in luminosity. If we approximate the afterglow emission as a linear function over time, then the slope becomes smaller.
 
-To compute the estimations on the sample size for each realtion, we employ the Fisher information matrix for any relation $X-Y$ we write, Y corresponds to a different obserable in each relation (see. Table \ref{tab:grb}.
+To compute the estimations on the sample size for each relation, we employ the Fisher information matrix. For any relation $X-Y$, $Y$ corresponds to a different observable in each relation (see Table \ref{tab:grb}).
 $$
 \log_{10} Y = a + b \log_{10} E_{p,i}
 $$
@@ -154,29 +155,27 @@ Given the distance modulus
 $$
 \mu(z) = 5 \log_{10} \left(\frac{d_L (z)}{\mathrm{Mpc}}\right) +25
 $$
-Then by substituting into the distance modulues we find
+Then by substituting into the distance modulus we find
 $$
-\mu(z) = \frac{5}{2} \left[a + b\log_{10} E_\mathrm{p,i} - \log_{10} X_\mathrm{obs} - \alpha \log_{10} (1+z) - \log_{10}(4\pi) \right] + 25.
+\mu(z) = \frac{5}{2} \left[a + b\log_{10} E_\mathrm{p,i} - \log_{10} X_\mathrm{obs} - \alpha \log_{10} (1+z) - \log_{10}(4\pi) \right] + 25.
 $$
-
 
 \begin{table}[htbp]
-	\centering
-	\caption{Gamma-Ray Burst Relations}
-	\label{tab:grb}
-	\small
-
-	\begin{tabular}{l l l c}
-		\hline
-		\textbf{Relation} & $\mathbf{Y}$ & $\mathbf{X_\mathrm{obs}}$ & \textbf{$\alpha$} \\
-		\hline
-		Amati & $E_{\mathrm{iso}}$ & $S_\mathrm{bolo}$ (bolometric fluence) & $-1$ \\
-		\hline
-		Ghirlanda & $E_{\gamma}$ & $S_\mathrm{bolo} (1-\cos\theta_j)$ & $-1$ \\
-		\hline
-		Yonetoku & $L_{\mathrm{iso}}$ & $P_{bolo}$ (peak flux) & $0$ \\
-		\hline
-	\end{tabular}
+    \centering
+    \caption{Gamma-Ray Burst Relations}
+    \label{tab:grb}
+    \small
+    \begin{tabular}{l l l c}
+        \hline
+        \textbf{Relation} & $\mathbf{Y}$ & $\mathbf{X_\mathrm{obs}}$ & \textbf{$\alpha$} \\
+        \hline
+        Amati & $E_{\mathrm{iso}}$ & $S_\mathrm{bolo}$ (bolometric fluence) & $-1$ \\
+        \hline
+        Ghirlanda & $E_{\gamma}$ & $S_\mathrm{bolo} (1-\cos\theta_j)$ & $-1$ \\
+        \hline
+        Yonetoku & $L_{\mathrm{iso}}$ & $P_{bolo}$ (peak flux) & $0$ \\
+        \hline
+    \end{tabular}
 \end{table}
 
 Then, applying standard error propagation taking into account the intrinsic physical scatter $\sigma_\mathrm{int}$ together with the measurement uncertainties follows:
@@ -184,11 +183,18 @@ $$
 \sigma_\mu = \frac{5}{2} \sqrt{\sigma_\mathrm{int}^2 + b^2 \sigma_{\log E_\mathrm{p,i}}^2 + \sigma_{\log X_\mathrm{obs}}^2}
 $$
 
-The intrinsic error respresents a fixed, intrinsic variation in the empirical relation. It ranges from $\sigma_\mathr{int} \approx 0.10 \mathrm{dex}$ for Ghirlanda to $\sigma_\mathrm{int} \appro 0.30 \mathrm{dex}$ for Amati and Yonetoku. In order to project these errors into the computation of a cosmological parameters such as $\Omega_m$, we calculate the Fisher Information Matrix $F$.
+The intrinsic error represents a fixed, intrinsic variation in the empirical relation. It ranges from $\sigma_\mathrm{int} \approx 0.10 \mathrm{dex}$ for Ghirlanda to $\sigma_\mathrm{int} \approx 0.30 \mathrm{dex}$ for Amati and Yonetoku. In order to project these errors into the computation of a cosmological parameter such as $\Omega_m$, we calculate the Fisher Information Matrix $F$. 
 
-\textcolor{red}{missing: finish writting up the math and introduce the results for the simulations using the figure grb_statistics_estimations.pdf
+For a single observable $\mu(z)$, the Fisher information with respect to the parameter $\Omega_m$ is given by $F = \frac{1}{\sigma_\mu^2} \left( \frac{\partial \mu}{\partial \Omega_m} \right)^2$. Assuming a sample of $N$ GRBs, the total information scales linearly with $N$. By setting the targeted parameter variance to $\Delta \Omega_m^2 = 1 / F_{\mathrm{total}}$, we can invert the Fisher Matrix to estimate the required sample size:
+$$
+N = \frac{\sigma_\mu^2}{(\Delta \Omega_m)^2 \left\langle \left( \frac{\partial \mu}{\partial \Omega_m} \right)^2 \right\rangle}
+$$
+The results of our simulations mapping $N$ against observational uncertainty are shown in Figure \ref{fig:grb_stats}. As expected, the Ghirlanda relation requires a significantly smaller cosmological sample ($\sim 27-40$ GRBs) to achieve competitive precision due to its tight intrinsic scatter. However, it is observationally limited by the rare detection of explicit afterglow jet breaks. Conversely, the Amati and Yonetoku relations demand much larger catalogs ($\sim 150-241$ GRBs) to overcome their $\approx 0.30 \mathrm{dex}$ intrinsic scatter.
 
-
+\begin{figure}
+    \includegraphics[width=0.8\pagewidth]{grb\_estimates/grb\_statistics\_estimates.pdf}
+    \caption{Estimates of required sample of observed GRB to constrain $\Omega_m$ to $10\%$ and $1\%$ uncertainty computed for the Amati, Yonetoku and Ghirlanda relation.}
+\end{figure}
 
 %====================================================
 \section{Lorentz Invariance and High-Energy Photon Lags}
