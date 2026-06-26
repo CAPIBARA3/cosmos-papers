@@ -109,6 +109,11 @@ While the Amati relation relies solely on prompt gamma-ray emission, other empir
 
 The integration of gravitational wave (GW) standard sirens and gamma-ray bursts provides an exceptionally powerful multi-messenger framework for breaking cosmological parameter degeneracies. While standard sirens yield absolute, calibration-free luminosity distances that directly constrain $H_0$, they suffer from a strong inclination-distance degeneracy and are currently limited to the relatively local universe ($z \lesssim 0.1$ for binary neutron star mergers). Conversely, GRBs can be observed up to the highest redshifts ($z \gtrsim 9$), making them excellent probes of matter density $\Omega_m$ and dark energy evolution $w(z)$. By combining the local absolute calibration of GW standard sirens with the high-redshift lever arm of GRB empirical relations, the mutual parameter degeneracies are effectively broken, yielding significantly tighter joint constraints.
 
+\begin{figure}
+    \includegraphics[width=0.8\linewidth]{code/complementarity.pdf}
+    \caption{Simple diagram demonstrating the concept of complementarity behind the synergies between GRB and GW observations for cosmological parameter inference.}
+\end{figure}
+
 \subsection{GRB Statistics Estimations}
 
 In order to compute cosmological parameters with accuracy, a large sample of GRBs is needed so that the fit of the empirical relation over the cosmological parameter space has the lowest error uncertainty possible. We compute the number of GRBs necessary to observe with average measurement uncertainty $(0.01 \mathrm{dex} < \sigma_\mathrm{obs} < 0.2 \mathrm{dex})$ to obtain $10\%$ and $1\%$ precision on $\Omega_m$. For the error uncertainty propagation, we compare three different standard empirical relations: the Amati, Yonetoku, and Ghirlanda relations \citep{ghirlanda200X}.
@@ -145,14 +150,11 @@ we substitute $d_L(z)$ into the distance modulus equation to find:
     \caption{Gamma-Ray Burst Relations}
     \label{tab:grb}
     \small
-    \begin{tabular postseason{l l l c}}
-        \hline
+    \begin{tabular postseason{l | l | l | c}}
         \textbf{Relation} & $\mathbf{Y}$ & $\mathbf{X_\mathrm{obs}}$ & \textbf{$\alpha$} \\
         \hline
-        Amati & $E_{\mathrm{iso}}$ & $S_\mathrm{bolo}$ (bolometric fluence) & $-1$ \\
-        \hline
+        Amati & $E_{\mathrm{iso}}$ & $S_\mathrm{bolo}$ (bolometric fluence)\\
         Ghirlanda & $E_{\gamma}$ & $S_\mathrm{bolo} (1-\cos\theta_j)$ & $-1$ \\
-        \hline
         Yonetoku & $L_{\mathrm{iso}}$ & $P_{\mathrm{bolo}}$ (peak flux) & $0$ \\
         \hline
     \end{tabular}
@@ -178,7 +180,7 @@ The results of our numerical simulations evaluating $N$ against changing average
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\columnwidth]{grb_estimates/grb_statistics_estimates.pdf}
+    \includegraphics[width=\columnwidth]{code/grb_statistics_estimates.pdf}
     \caption{Estimates of the required sample size of observed GRBs to constrain $\Omega_m$ to $10\%$ and $1\%$ precision, computed for the Amati, Yonetoku, and Ghirlanda relations.}
     \label{fig:grb_stats}
 \end{figure}
