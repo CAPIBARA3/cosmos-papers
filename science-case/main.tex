@@ -124,9 +124,9 @@ In order to compute cosmological parameters with accuracy, a large sample of GRB
     \item Ghirlanda: $E_\mathrm{p, i} \propto E_\gamma ^c$
 \end{itemize}
 
-Where $a,b,c$ are free parameters, $L_\mathrm{iso}$ is the isotropic luminosity, which is related to the luminosity distance by $d_L (z) = (L_\mathrm{iso} / 4\pi F)^{1/2}$, and $E_\gamma$ is the collimation corrected energy, $E_\gamma = E_\mathrm{iso} (1-\cos \theta_j)$ with $\theta_j$ being the jet opening angle. $E_\gamma$ can only be computed if $\theta_j$ is known, i.e., if the jet break time $t_\mathrm{break}$ is observed in the afterglow, thus highlighting the importance of rapid alerts and follow-up observations in multiple energy ranges.
+where $a,b,c$ are free parameters, $L_\mathrm{iso}$ is the isotropic luminosity, which is related to the luminosity distance by $d_L (z) = (L_\mathrm{iso} / 4\pi F)^{1/2}$, and $E_\gamma$ is the collimation corrected energy, $E_\gamma = E_\mathrm{iso} (1-\cos \theta_j)$ with $\theta_j$ being the jet opening angle. $E_\gamma$ can only be computed if $\theta_j$ is known, i.e., if the jet break time $t_\mathrm{break}$ is observed in the afterglow, thus highlighting the importance of rapid alerts and follow-up observations in multiple energy ranges.
 
-Since GRBs are jet-driven phenomena, due to relativistic aberration an observer only sees photons within a cone of aperture defined by $\theta_\Gamma \propto \Gamma^{-1}$, where $\Gamma$ is the bulk Lorentz factor of the emitting material. This emitting material gets slowed down by the medium around the GRB source; thus, as the jet travels, $\Gamma$ diminishes and $\theta_\Gamma$ increases. During this time the observer perceives increasing luminosity, since the cone diameter gets larger, followed by a peak and an afterglow as the emission decreases. The turning point happens when $\theta_\Gamma = \theta_j$, at which point the totality of the jet's surface is visible and there is a sudden decrease in luminosity. If we approximate the afterglow emission as a linear function over time, then the slope becomes smaller.
+Since GRBs are jet-driven phenomena, due to relativistic aberration an observer only sees photons within a cone of aperture defined by $\theta_\Gamma \propto \Gamma^{-1}$, where $\Gamma$ is the bulk Lorentz factor of the emitting material. This emitting material gets slowed down by the medium around the GRB source; thus, as the jet travels, $\Gamma$ diminishes and $\theta_\Gamma$ increases. During this time the observer perceives increasing luminosity, since the cone diameter gets larger, followed by a peak and an afterglow as the emission decreases. The turning point happens when $\theta_\Gamma = \theta_j$, at which point the totality of the jet's surface is visible and there is a sudden decrease in luminosity. If we approximate the afterglow emission as a linear function over time, then the slope becomes steeper.
 
 To compute the estimations on the sample size for each relation, we employ the Fisher information matrix. For any relation $X-Y$, $Y$ corresponds to a different observable in each relation (see Table \ref{tab:grb}).
 \begin{equation}
@@ -150,10 +150,10 @@ we substitute $d_L(z)$ into the distance modulus equation to find:
     \caption{Gamma-Ray Burst Relations}
     \label{tab:grb}
     \small
-    \begin{tabular postseason{l | l | l | c}}
+    \begin{tabular}{l | l | l | c}
         \textbf{Relation} & $\mathbf{Y}$ & $\mathbf{X_\mathrm{obs}}$ & \textbf{$\alpha$} \\
         \hline
-        Amati & $E_{\mathrm{iso}}$ & $S_\mathrm{bolo}$ (bolometric fluence)\\
+        Amati & $E_{\mathrm{iso}}$ & $S_\mathrm{bolo}$ (bolometric fluence) & $-1$ \\
         Ghirlanda & $E_{\gamma}$ & $S_\mathrm{bolo} (1-\cos\theta_j)$ & $-1$ \\
         Yonetoku & $L_{\mathrm{iso}}$ & $P_{\mathrm{bolo}}$ (peak flux) & $0$ \\
         \hline
@@ -211,7 +211,7 @@ The results of our numerical simulations evaluating $N$ against changing average
 
 \begin{itemize}
 	\item high enough energy and spectral resolution to accurately identify $E_\text{peak}$
-	\item broad energy range (especially towards higher energies) to don't be blind to $E_\text{peak}$
+	\item broad energy range (especially towards higher energies) to avoid missing $E_\text{peak}$
 	\item broad field of view (to observe more GRBs)
 \end{itemize}
 
@@ -222,7 +222,7 @@ The results of our numerical simulations evaluating $N$ against changing average
 % Acknowledgments
 
 \begin{acknowledgments}
-	The authors are grateful to members of the CAPIBARA Collaboration for useful discussions and feedback]. The authors \href{https://capibara3.github.io/contact.html}{welcome feedback}.
+	The authors are grateful to members of the CAPIBARA Collaboration for useful discussions and feedback. The authors \href{https://capibara3.github.io/contact.html}{welcome feedback}.
 \end{acknowledgments}
 
 % Bibliography
